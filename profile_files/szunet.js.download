@@ -1,0 +1,23 @@
+function szunet() {
+    var szunetgomb = document.getElementById("szunetgomb");
+	var layer1 = document.getElementById("layer1");
+    var layer2 = document.getElementById("layer2");
+    var layer3 = document.getElementById("layer3");
+    if (szunetgomb.className == "fa fa-pause fa-lg")
+    {szunetgomb.title = 'Play slideshow';
+	 szunetgomb.className = 'fa fa-play fa-lg';}
+    else {
+	 szunetgomb.title = 'Pause slideshow';
+	 szunetgomb.className = 'fa fa-pause fa-lg';}
+    if (layer1.style.animationPlayState == 'paused') {
+        layer1.style.animationPlayState = 'running';
+        layer2.style.animationPlayState = 'running';
+        layer3.style.animationPlayState = 'running';
+        document.body.className = 'paused';
+    } else {
+        layer1.style.animationPlayState = 'paused';
+        layer2.style.animationPlayState = 'paused';
+        layer3.style.animationPlayState = 'paused';
+        document.body.className = '';
+    }
+}
